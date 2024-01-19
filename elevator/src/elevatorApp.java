@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class elevatorApp {
+public class ElevatorApp {
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
@@ -37,6 +37,6 @@ public class elevatorApp {
             System.out.print("Enter your desired floor: ");
             selectedFloor = sc.nextInt();
         }
-
+        sc.close();
     }
 }
