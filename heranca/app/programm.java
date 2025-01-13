@@ -1,9 +1,9 @@
 public class programm {
     
     public static void main(String[] args) {
-        Account acount1 = new Account(01,"Bruno", 0.0);
+        Account acount1 = new Account(01,"Bruno", 1000.0);
         SavingsAccount savingAcount1 = new SavingsAccount(02, "BACorp", 1000.00, 5.0);
-        BusinessAccount businessAccount1 = new BusinessAccount(03, "SACorp", 5000.00, 1000.0);
+        BusinessAccount businessAccount1 = new BusinessAccount(03, "SACorp", 1000.00, 1000.0);
 
         //UPCASTING = Transformar objeto de subclasse em objeto de superclasse
         Account acount2 = businessAccount1;
@@ -18,7 +18,14 @@ public class programm {
         //BusinessAccount businessAccount3 = savingsAccount2; -> Isso não é possivel pois são de instancias/classes diferentes
         if (savingsAccount2 instanceof SavingsAccount){
             SavingsAccount savingsAccount3 = savingsAccount2;
-            System.out.println("Nice!");
+            //System.out.println("Nice!");
         }
+
+        acount1.withdraw(200.0);
+        System.out.println(acount1.getBalance());
+        savingAcount1.withdraw(200.0);
+        System.out.println(savingAcount1.getBalance());
+        businessAccount1.withdraw(200.0);
+        System.out.println(businessAccount1.getBalance());
     }
 }
